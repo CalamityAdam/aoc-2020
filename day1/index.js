@@ -1,9 +1,6 @@
 const fs = require('fs');
 const data = fs.readFileSync('input.txt', 'UTF-8');
 const lines = data.split(/\r?\n/);
-const inputs = [];
-
-lines.forEach(line => inputs.push(parseInt(line)));
 
 const checkExpenseReport = (report, target) => {
   const table = {};
@@ -17,4 +14,4 @@ const checkExpenseReport = (report, target) => {
   }
 }
 
-console.log(checkExpenseReport(inputs, 2020));
+console.log(checkExpenseReport(lines, 2020));
